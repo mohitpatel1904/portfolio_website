@@ -699,6 +699,23 @@ header .mobile-nav {
   transform: translateY(-2px);
 }
 
+/* Project Category Titles */
+.category-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: 48px 0 24px 0;
+  padding-left: 16px;
+  border-left: 4px solid;
+  border-image: var(--gradient-1) 1;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.category-title:first-of-type {
+  margin-top: 24px;
+}
+
 /* Education Section */
 .education-cards {
   display: grid;
