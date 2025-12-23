@@ -699,6 +699,35 @@ header .mobile-nav {
   transform: translateY(-2px);
 }
 
+/* Project Category Styles */
+.project-category {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 48px;
+}
+
+.project-category:last-child {
+  margin-bottom: 0;
+}
+
+.project-category .category-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 4px solid;
+  border-image: var(--gradient-1) 1;
+}
+
+.project-category .category-title svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
 /* Education Section */
 .education-cards {
   display: grid;
@@ -788,7 +817,7 @@ header .mobile-nav {
   color: var(--text-primary);
 }
 
-.contact-info > p {
+.contact-info>p {
   color: var(--text-secondary);
   margin-bottom: 32px;
   line-height: 1.7;
@@ -1058,13 +1087,16 @@ footer .container .link-container .navigation ul li a:hover {
     stroke-dashoffset: 25%;
     stroke-dasharray: 0 50%;
   }
+
   70% {
     stroke: var(--primary-color);
   }
+
   80% {
     stroke: var(--secondary-color);
     stroke-width: 3;
   }
+
   100% {
     stroke: var(--primary-color);
     stroke-width: 0;
@@ -1078,13 +1110,14 @@ footer .container .link-container .navigation ul li a:hover {
   .container {
     padding: 1rem 3rem;
   }
-  
+
   header {
     padding: 16px 2rem;
   }
 }
 
 @media screen and (max-width: 1024px) {
+
   header nav,
   header .extra-nav {
     display: none;
