@@ -716,6 +716,80 @@ header .mobile-nav {
   margin-top: 24px;
 }
 
+/* Video Project Card */
+.video-card {
+  flex-direction: column;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-video {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.video-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.video-overlay .play-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.video-overlay .play-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--bg-dark);
+  margin-left: 4px;
+}
+
+.video-container:hover .play-icon {
+  transform: scale(1.1);
+}
+
+.video-overlay span {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.video-card .description {
+  padding-top: 16px;
+}
+
 /* Education Section */
 .education-cards {
   display: grid;

@@ -31,3 +31,18 @@ nav.addEventListener("click", (e) => {
     document.body.style.overflow = "auto";
   }
 });
+
+// Toggle video audio and overlay
+function toggleVideoAudio(container) {
+  const video = container.querySelector('video');
+  const overlay = container.querySelector('.video-overlay');
+
+  if (video.muted) {
+    video.muted = false;
+    video.currentTime = 0;
+    overlay.classList.add('hidden');
+  } else {
+    video.muted = true;
+    overlay.classList.remove('hidden');
+  }
+}
